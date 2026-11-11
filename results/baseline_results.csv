@@ -1,0 +1,5 @@
+model,dataset,precision,accuracy,params,size_mb,latency_ms_median,latency_ms_mean,total,seed,device,checkpoint
+mobilenet_v2,ImageNet-1k val subset (5/class),FP32,0.7256,3504872,13.6092,32.18175005167723,32.33352901414037,5000,42,cuda,D:\SanJose\personal_projects\model_compression\checkpoints\mobilenet_v2_imagenet_fp32.pth
+efficientnet_b0,ImageNet-1k val subset (5/class),FP32,0.779,5288548,20.4667,52.14780010282993,53.0858790082857,5000,42,cuda,D:\SanJose\personal_projects\model_compression\checkpoints\efficientnet_b0_imagenet_fp32.pth
+resnet50,ImageNet-1k val subset (5/class),FP32,0.7734,25557032,97.8003,38.91930007375777,39.86856197938323,5000,42,cuda,D:\SanJose\personal_projects\model_compression\checkpoints\resnet50_imagenet_fp32.pth
+temponet,NinaPro DB2 (DB2_s1),FP32,0.34579182680994586,263225,1.034,8.621550165116787,8.41287303250283,25498,42,cuda,D:\SanJose\personal_projects\model_compression\checkpoints\temponet_ninapro_db2_fp32_best.pth

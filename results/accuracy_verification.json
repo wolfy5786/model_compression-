@@ -1,0 +1,339 @@
+[
+  {
+    "model": "mobilenet_v2",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "our_acc1": 0.7256,
+    "our_acc5": 0.9026,
+    "published_acc1_full_val": 0.71878,
+    "published_acc5_full_val": 0.90286,
+    "delta_acc1_vs_published": 0.006820000000000048,
+    "weights": "MobileNet_V2_Weights.IMAGENET1K_V1",
+    "published_source": "https://docs.pytorch.org/vision/stable/models.html",
+    "verification": "PASS (within expected subset sampling noise)",
+    "confusion_matrix": {
+      "npz": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\mobilenet_v2_confusion_matrix.npz",
+      "png": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\mobilenet_v2_confusion_matrix.png",
+      "top_confused_pairs_csv": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\mobilenet_v2_top_confused_pairs.csv",
+      "num_classes": 1000,
+      "mean_per_class_recall": 0.7256,
+      "top_confused_pairs": [
+        {
+          "true": 385,
+          "pred": 101,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 461,
+          "pred": 524,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 482,
+          "pred": 848,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 493,
+          "pred": 894,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 66,
+          "pred": 68,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 142,
+          "pred": 140,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 240,
+          "pred": 238,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 265,
+          "pred": 266,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 282,
+          "pred": 292,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 348,
+          "pred": 349,
+          "count": 3,
+          "row_norm": 0.6
+        }
+      ]
+    },
+    "n_eval": 5000
+  },
+  {
+    "model": "efficientnet_b0",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "our_acc1": 0.779,
+    "our_acc5": 0.9346,
+    "published_acc1_full_val": 0.77692,
+    "published_acc5_full_val": 0.93532,
+    "delta_acc1_vs_published": 0.0020799999999999708,
+    "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+    "published_source": "https://docs.pytorch.org/vision/stable/models.html",
+    "verification": "PASS (within expected subset sampling noise)",
+    "confusion_matrix": {
+      "npz": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\efficientnet_b0_confusion_matrix.npz",
+      "png": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\efficientnet_b0_confusion_matrix.png",
+      "top_confused_pairs_csv": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\efficientnet_b0_top_confused_pairs.csv",
+      "num_classes": 1000,
+      "mean_per_class_recall": 0.779,
+      "top_confused_pairs": [
+        {
+          "true": 493,
+          "pred": 894,
+          "count": 5,
+          "row_norm": 1.0
+        },
+        {
+          "true": 240,
+          "pred": 238,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 461,
+          "pred": 524,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 482,
+          "pred": 848,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 836,
+          "pred": 837,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 265,
+          "pred": 266,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 282,
+          "pred": 292,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 348,
+          "pred": 349,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 391,
+          "pred": 394,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 435,
+          "pred": 876,
+          "count": 3,
+          "row_norm": 0.6
+        }
+      ]
+    },
+    "n_eval": 5000
+  },
+  {
+    "model": "resnet50",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "our_acc1": 0.7734,
+    "our_acc5": 0.9338,
+    "published_acc1_full_val": 0.7613,
+    "published_acc5_full_val": 0.92862,
+    "delta_acc1_vs_published": 0.0121,
+    "weights": "ResNet50_Weights.IMAGENET1K_V1",
+    "published_source": "https://docs.pytorch.org/vision/stable/models.html",
+    "verification": "PASS (within expected subset sampling noise)",
+    "confusion_matrix": {
+      "npz": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\resnet50_confusion_matrix.npz",
+      "png": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\resnet50_confusion_matrix.png",
+      "top_confused_pairs_csv": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\resnet50_top_confused_pairs.csv",
+      "num_classes": 1000,
+      "mean_per_class_recall": 0.7734000000000001,
+      "top_confused_pairs": [
+        {
+          "true": 493,
+          "pred": 894,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 836,
+          "pred": 837,
+          "count": 4,
+          "row_norm": 0.8
+        },
+        {
+          "true": 265,
+          "pred": 266,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 266,
+          "pred": 265,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 278,
+          "pred": 277,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 282,
+          "pred": 292,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 422,
+          "pred": 543,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 435,
+          "pred": 876,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 461,
+          "pred": 524,
+          "count": 3,
+          "row_norm": 0.6
+        },
+        {
+          "true": 482,
+          "pred": 848,
+          "count": 3,
+          "row_norm": 0.6
+        }
+      ]
+    },
+    "n_eval": 5000
+  },
+  {
+    "model": "temponet",
+    "dataset": "NinaPro DB2 (DB2_s1) test split",
+    "our_acc1": 0.34579182680994586,
+    "published_reference": {
+      "paper": "Zanghieri et al., IEEE TBioCAS 2020",
+      "dataset_in_paper": "NinaPro DB6 (grasp recognition; inter-session)",
+      "acc_steady_intersession": 0.652,
+      "acc_full_intersession": 0.496,
+      "acc_20session_custom": 0.937,
+      "source": "https://doi.org/10.1109/tbcas.2019.2959160",
+      "comparability": "Not directly comparable: paper uses NinaPro DB6 / custom multi-session grasp setups (~few grasp classes, inter-session). Ours is NinaPro DB2 subject 1, 49 movement classes, repetition hold-out."
+    },
+    "verification": "NOT DIRECTLY COMPARABLE (different dataset/classes/protocol)",
+    "chance_accuracy_49_classes": 0.02040816326530612,
+    "confusion_matrix": {
+      "npz": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\temponet_confusion_matrix.npz",
+      "png": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\temponet_confusion_matrix.png",
+      "top_confused_pairs_csv": "D:\\SanJose\\personal_projects\\model_compression\\results\\confusion_matrices\\temponet_top_confused_pairs.csv",
+      "num_classes": 49,
+      "mean_per_class_recall": 0.3295997206926101,
+      "top_confused_pairs": [
+        {
+          "true": 47,
+          "pred": 42,
+          "count": 225,
+          "row_norm": 0.3328402366863905
+        },
+        {
+          "true": 28,
+          "pred": 29,
+          "count": 213,
+          "row_norm": 0.2508833922261484
+        },
+        {
+          "true": 40,
+          "pred": 3,
+          "count": 175,
+          "row_norm": 0.2708978328173375
+        },
+        {
+          "true": 28,
+          "pred": 30,
+          "count": 157,
+          "row_norm": 0.18492343934040048
+        },
+        {
+          "true": 32,
+          "pred": 29,
+          "count": 153,
+          "row_norm": 0.326226012793177
+        },
+        {
+          "true": 43,
+          "pred": 48,
+          "count": 152,
+          "row_norm": 0.24877250409165302
+        },
+        {
+          "true": 41,
+          "pred": 3,
+          "count": 137,
+          "row_norm": 0.2127329192546584
+        },
+        {
+          "true": 36,
+          "pred": 4,
+          "count": 118,
+          "row_norm": 0.25213675213675213
+        },
+        {
+          "true": 11,
+          "pred": 15,
+          "count": 117,
+          "row_norm": 0.2521551724137931
+        },
+        {
+          "true": 2,
+          "pred": 1,
+          "count": 108,
+          "row_norm": 0.1978021978021978
+        }
+      ]
+    },
+    "n_eval": 25498,
+    "window_counts": {
+      "train": 38971,
+      "val": 12511,
+      "test": 25498
+    }
+  }
+]
