@@ -1,0 +1,23 @@
+﻿.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data and large artifacts (keep results summaries)
+data/imagenet/
+data/ninapro/
+data/*.zip
+checkpoints/
+*.pt
+*.pth
+*.onnx
+results/baseline_results_*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

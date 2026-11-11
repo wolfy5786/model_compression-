@@ -153,18 +153,41 @@ Relevant resources:
 6. Summarize size / latency / accuracy tradeoffs
 ```
 
-## Repository Layout (planned)
+## Repository Layout
 
 ```text
 model_compression/
 ├── README.md
 ├── models/                 # model loaders & TEMPONet definition
-├── quantization/           # PTQ / QAT scripts (8 / 16 / 32 bit)
-├── benchmarks/             # latency + confusion-matrix runners
-├── rlibm_integration/      # hooks / wrappers for correctly rounded math
-├── data/                   # dataset configs (ImageNet subset, NinaPro / EMG)
-└── results/                # tables, plots, confusion matrices
+├── quantization/           # PTQ / QAT scripts (8 / 16 / 32 bit) [planned]
+├── benchmarks/             # FP32 baseline (+ later latency / confusion runners)
+├── rlibm_integration/      # hooks / wrappers for correctly rounded math [planned]
+├── data/                   # dataset configs + split docs (ImageNet subset, NinaPro)
+├── scripts/                # dataset download helpers
+├── checkpoints/            # local FP32 weights (gitignored)
+└── results/                # baseline CSV / JSON / summary tables
 ```
+
+## FP32 baselines (current)
+
+| Model | Dataset |
+|-------|---------|
+| MobileNetV2, EfficientNet-B0, ResNet-50 | ImageNet-1k val subset (5 images/class; pretrained torchvision weights) |
+| TEMPONet | NinaPro DB2 subject 1 (train from scratch) |
+
+Deterministic splits / seed are documented in [`data/SPLITS.md`](data/SPLITS.md) (`seed=42`).
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+.\.venv\Scripts\python.exe scripts\download_datasets.py --all
+.\.venv\Scripts\python.exe benchmarks\run_baselines.py
+# Resume TEMPONet only:
+.\.venv\Scripts\python.exe benchmarks\run_baselines.py --models temponet --resume --temponet-epochs 15
+```
+
+Outputs: `results/baseline_results.csv`, `results/baseline_results.json`, `results/baseline_summary.md`.
 
 ## Success Criteria
 

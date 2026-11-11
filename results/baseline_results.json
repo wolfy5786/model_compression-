@@ -1,0 +1,229 @@
+[
+  {
+    "model": "mobilenet_v2",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "precision": "FP32",
+    "pretrained": true,
+    "params": 3504872,
+    "size_mb": 13.6092,
+    "accuracy": 0.7256,
+    "correct": 3628,
+    "total": 5000,
+    "checkpoint": "D:\\SanJose\\personal_projects\\model_compression\\checkpoints\\mobilenet_v2_imagenet_fp32.pth",
+    "split": {
+      "protocol": "ILSVRC2012 official train/val; eval on fixed val subset",
+      "subset": "5 images/class from official val (ndb796 Small-ImageNet-Validation-Dataset-1000-Classes)",
+      "train_ratio": null,
+      "val_images_per_class": 5,
+      "num_classes": 1000,
+      "eval_split": "val_subset",
+      "notes": "Test split unused. No leakage: subset is drawn only from official val."
+    },
+    "seed": 42,
+    "latency_ms_mean": 32.33352901414037,
+    "latency_ms_median": 32.18175005167723,
+    "latency_ms_p90": 35.406299866735935,
+    "latency_batch_size": 1,
+    "device": "cuda",
+    "timestamp_utc": "2026-11-11T21:36:01.227876+00:00"
+  },
+  {
+    "model": "efficientnet_b0",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "precision": "FP32",
+    "pretrained": true,
+    "params": 5288548,
+    "size_mb": 20.4667,
+    "accuracy": 0.779,
+    "correct": 3895,
+    "total": 5000,
+    "checkpoint": "D:\\SanJose\\personal_projects\\model_compression\\checkpoints\\efficientnet_b0_imagenet_fp32.pth",
+    "split": {
+      "protocol": "ILSVRC2012 official train/val; eval on fixed val subset",
+      "subset": "5 images/class from official val (ndb796 Small-ImageNet-Validation-Dataset-1000-Classes)",
+      "train_ratio": null,
+      "val_images_per_class": 5,
+      "num_classes": 1000,
+      "eval_split": "val_subset",
+      "notes": "Test split unused. No leakage: subset is drawn only from official val."
+    },
+    "seed": 42,
+    "latency_ms_mean": 53.0858790082857,
+    "latency_ms_median": 52.14780010282993,
+    "latency_ms_p90": 58.5139999166131,
+    "latency_batch_size": 1,
+    "device": "cuda",
+    "timestamp_utc": "2026-11-11T21:37:28.626061+00:00"
+  },
+  {
+    "model": "resnet50",
+    "dataset": "ImageNet-1k val subset (5/class)",
+    "precision": "FP32",
+    "pretrained": true,
+    "params": 25557032,
+    "size_mb": 97.8003,
+    "accuracy": 0.7734,
+    "correct": 3867,
+    "total": 5000,
+    "checkpoint": "D:\\SanJose\\personal_projects\\model_compression\\checkpoints\\resnet50_imagenet_fp32.pth",
+    "split": {
+      "protocol": "ILSVRC2012 official train/val; eval on fixed val subset",
+      "subset": "5 images/class from official val (ndb796 Small-ImageNet-Validation-Dataset-1000-Classes)",
+      "train_ratio": null,
+      "val_images_per_class": 5,
+      "num_classes": 1000,
+      "eval_split": "val_subset",
+      "notes": "Test split unused. No leakage: subset is drawn only from official val."
+    },
+    "seed": 42,
+    "latency_ms_mean": 39.86856197938323,
+    "latency_ms_median": 38.91930007375777,
+    "latency_ms_p90": 44.579099863767624,
+    "latency_batch_size": 1,
+    "device": "cuda",
+    "timestamp_utc": "2026-11-11T21:38:49.345392+00:00"
+  },
+  {
+    "model": "temponet",
+    "dataset": "NinaPro DB2 (DB2_s1)",
+    "precision": "FP32",
+    "pretrained": false,
+    "params": 263225,
+    "size_mb": 1.034,
+    "accuracy": 0.34579182680994586,
+    "correct": 8817,
+    "total": 25498,
+    "val_best_accuracy": 0.3234753416993046,
+    "checkpoint": "D:\\SanJose\\personal_projects\\model_compression\\checkpoints\\temponet_ninapro_db2_fp32_best.pth",
+    "split": {
+      "protocol": "repetition hold-out (DB2 has 6 reps/movement)",
+      "train_repetitions": [
+        1,
+        3,
+        4
+      ],
+      "val_repetitions": [
+        6
+      ],
+      "test_repetitions": [
+        2,
+        5
+      ],
+      "train_ratio": 0.5,
+      "val_ratio": 0.16666666666666666,
+      "test_ratio": 0.3333333333333333,
+      "window_ms": 150,
+      "stride_ms": 15,
+      "sampling_hz": 2000,
+      "notes": "Splits by repetition id so temporally adjacent windows cannot cross splits."
+    },
+    "window_counts": {
+      "train": 38971,
+      "val": 12511,
+      "test": 25498
+    },
+    "num_classes": 49,
+    "in_channels": 12,
+    "seed": 42,
+    "epochs": 15,
+    "lr": 0.001,
+    "latency_ms_mean": 8.41287303250283,
+    "latency_ms_median": 8.621550165116787,
+    "latency_ms_p90": 9.56120016053319,
+    "latency_batch_size": 1,
+    "device": "cuda",
+    "timestamp_utc": "2026-11-11T21:51:48.766164+00:00",
+    "train_history": [
+      {
+        "epoch": 1,
+        "train_loss": 3.1584316486788753,
+        "train_acc": 0.1443380975597239,
+        "val_acc": 0.18519702661657741
+      },
+      {
+        "epoch": 2,
+        "train_loss": 2.0672170040786155,
+        "train_acc": 0.35639321546791203,
+        "val_acc": 0.25177843497722
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.5878146717116512,
+        "train_acc": 0.48928690564778937,
+        "val_acc": 0.2536967468627608
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.2735906008016626,
+        "train_acc": 0.5850504221087476,
+        "val_acc": 0.2736791623371433
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.0296799179107958,
+        "train_acc": 0.6620050807010341,
+        "val_acc": 0.2254016465510351
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.8415299977625721,
+        "train_acc": 0.7185342947319802,
+        "val_acc": 0.2378706738070498
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.6933078120375202,
+        "train_acc": 0.7706756305971106,
+        "val_acc": 0.2579330189433299
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.5729967613243585,
+        "train_acc": 0.8087552282466449,
+        "val_acc": 0.30077531772040605
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.4813641657629476,
+        "train_acc": 0.8387262323266018,
+        "val_acc": 0.30581088641995047
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.41452679239401397,
+        "train_acc": 0.8630006928228683,
+        "val_acc": 0.30764926864359365
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.35330945374046707,
+        "train_acc": 0.8823484129224295,
+        "val_acc": 0.3041323635201023
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.3102540298307965,
+        "train_acc": 0.8955120474198763,
+        "val_acc": 0.29206298457357527
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.2868893836554398,
+        "train_acc": 0.9045444048138359,
+        "val_acc": 0.30900807289585164
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.24606095540545248,
+        "train_acc": 0.917040876549229,
+        "val_acc": 0.2693629605946767
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.23818083119210084,
+        "train_acc": 0.9204280105719638,
+        "val_acc": 0.3234753416993046
+      }
+    ]
+  }
+]
